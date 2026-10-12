@@ -1,0 +1,369 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Kaylin Renea</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Special+Elite&display=swap">
+<style>
+/* Layout: lantern-lit author's desk — portrait hero, bio as a letter, books as a shelf, the line that holds it all, then the house that publishes it. Single committed dark look. */
+:root{
+  --coal:#100b08;        /* page ground */
+  --hearth:#1a120d;      /* raised surfaces */
+  --seam:#3a2718;        /* rules, borders */
+  --bone:#efe4d0;        /* primary text */
+  --ash:#a8977f;         /* secondary text */
+  --brass:#c9a46a;       /* engraved metal accent */
+  --ember:#e0762a;       /* fire accent, used sparingly */
+  --f-display:"IM Fell English SC","IM Fell English",Georgia,"Times New Roman",serif;
+  --f-italic:"IM Fell English",Georgia,serif;
+  --f-body:"Crimson Pro",Georgia,"Times New Roman",serif;
+  --f-label:"Special Elite","Courier New",Courier,monospace;
+  --measure:64ch;
+  --gutter:clamp(16px,4vw,40px);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--coal)}
+body{background:var(--coal);color:var(--bone);font-family:var(--f-body);font-size:clamp(17px,1.05rem + .2vw,20px);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--brass);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ember);outline-offset:3px}
+img{display:block;max-width:100%;height:auto}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:var(--gutter)}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;text-wrap:balance;margin:0;letter-spacing:.01em}
+p{margin:0}
+.label{font-family:var(--f-label);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+.rule{display:flex;align-items:center;gap:14px;color:var(--brass)}
+.rule::before,.rule::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--seam) 30%,var(--seam) 70%,transparent)}
+.rule span{font-family:var(--f-display);font-size:1rem}
+
+/* ---------- top bar ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--coal) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--seam)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.top .mark{font-family:var(--f-display);font-size:1.15rem;color:var(--bone);text-decoration:none;letter-spacing:.06em}
+.top nav{display:flex;gap:clamp(12px,3vw,28px);flex-wrap:wrap}
+.top nav a{font-family:var(--f-label);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);text-decoration:none}
+.top nav a:hover{color:var(--bone)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--seam)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.7}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 90% at 78% 60%,rgba(224,118,42,.16),transparent 60%),radial-gradient(60% 70% at 10% 0%,rgba(201,164,106,.07),transparent 60%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,72px);align-items:center;padding-block:clamp(40px,7vw,96px)}
+.hero-copy{display:grid;gap:22px;min-width:0}
+.hero h1{font-size:clamp(3.2rem,9vw,7rem);line-height:.92;color:var(--bone)}
+.hero h1 em{display:block;font-family:var(--f-italic);font-style:italic;font-size:.34em;line-height:1.3;color:var(--brass);letter-spacing:.02em;margin-top:.35em}
+.hero .lede{font-size:clamp(1.12rem,1rem + .5vw,1.35rem);color:var(--bone);max-width:34ch;line-height:1.55}
+.hero .lede b{font-weight:500;color:var(--ember)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-label);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:13px 20px;border:1px solid var(--brass);color:var(--coal);background:var(--brass);transition:background .2s,color .2s}
+.btn:hover{background:var(--bone);border-color:var(--bone)}
+.btn.ghost{background:transparent;color:var(--brass)}
+.btn.ghost:hover{color:var(--bone);border-color:var(--bone);background:transparent}
+.portrait{position:relative;justify-self:end;width:min(100%,460px)}
+.portrait .frame{position:relative;padding:10px;border:1px solid var(--seam);background:linear-gradient(160deg,var(--hearth),var(--coal))}
+.portrait .frame::after{content:"";position:absolute;inset:4px;border:1px solid rgba(201,164,106,.35);pointer-events:none}
+.portrait img{aspect-ratio:4/5;object-fit:cover;object-position:28% 20%;width:100%;filter:saturate(1.02) contrast(1.03)}
+.portrait figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:12px}
+
+/* ---------- sections ---------- */
+section{padding-block:clamp(56px,8vw,112px)}
+.sec-head{display:grid;gap:10px;margin-bottom:clamp(28px,4vw,48px)}
+.sec-head h2{font-size:clamp(2.1rem,1.4rem + 2.6vw,3.4rem);line-height:1.05}
+.sec-head p{color:var(--ash);max-width:var(--measure)}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(32px,6vw,80px);align-items:start}
+.letter{display:grid;gap:1.1em;max-width:var(--measure);min-width:0}
+.letter p:first-of-type::first-letter{font-family:var(--f-display);float:left;font-size:4.1em;line-height:.82;padding:.06em .1em 0 0;color:var(--ember)}
+.letter .sign{font-family:var(--f-italic);font-style:italic;color:var(--brass);font-size:1.25rem;margin-top:.4em}
+.record{border:1px solid var(--seam);background:var(--hearth);padding:22px 24px;display:grid;gap:0;min-width:0}
+.record h3{font-family:var(--f-label);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);padding-bottom:12px;border-bottom:1px dashed var(--seam);margin-bottom:4px}
+.record dl{margin:0;display:grid}
+.record .row{display:grid;grid-template-columns:7.5em 1fr;gap:12px;padding-block:11px;border-bottom:1px dashed var(--seam)}
+.record .row:last-child{border-bottom:0}
+.record dt{font-family:var(--f-label);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);padding-top:.25em}
+.record dd{margin:0;line-height:1.45;min-width:0}
+
+/* books */
+.books{background:linear-gradient(180deg,var(--coal),var(--hearth) 30%,var(--hearth) 70%,var(--coal));border-block:1px solid var(--seam)}
+.shelf{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
+.book{display:grid;grid-template-rows:auto 1fr;gap:16px;min-width:0}
+.cover{position:relative;aspect-ratio:600/957;overflow:hidden;border:1px solid var(--seam);box-shadow:0 18px 40px -18px rgba(0,0,0,.9)}
+.cover img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.book:hover .cover img{transform:scale(1.03)}
+.cover .no{position:absolute;top:10px;left:10px;font-family:var(--f-label);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;background:rgba(16,11,8,.82);color:var(--brass);padding:5px 9px;border:1px solid var(--seam)}
+.book-text{display:grid;gap:8px;align-content:start}
+.book h3{font-size:1.5rem;line-height:1.1}
+.book .pair{font-family:var(--f-italic);font-style:italic;color:var(--brass)}
+.book p.hook{color:var(--bone);opacity:.9;font-size:.98em;line-height:1.55}
+.book .track{font-family:var(--f-label);font-size:.72rem;letter-spacing:.08em;color:var(--ash);padding-top:8px;border-top:1px dashed var(--seam);margin-top:4px}
+.book .track b{font-weight:400;color:var(--ember)}
+.bridge{margin-top:clamp(40px,6vw,72px);display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:clamp(20px,4vw,48px);align-items:center;border:1px solid var(--seam);background:var(--coal);padding:clamp(18px,3vw,28px)}
+.bridge .book-text{max-width:var(--measure)}
+
+/* creed */
+.creed .wrap{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:clamp(28px,6vw,80px);align-items:center}
+.seal{width:min(100%,300px);border-radius:50%;box-shadow:0 0 0 1px var(--seam),0 0 80px -10px rgba(201,164,106,.25)}
+.creed blockquote{margin:0;display:grid;gap:18px}
+.creed blockquote p{font-family:var(--f-italic);font-size:clamp(1.8rem,1.2rem + 2.4vw,3rem);line-height:1.15;color:var(--bone);text-wrap:balance}
+.creed blockquote p em{font-style:normal;font-family:var(--f-display);color:var(--ember)}
+.creed .follow{color:var(--ash);max-width:var(--measure)}
+
+/* house */
+.house{border-top:1px solid var(--seam)}
+.house .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(28px,6vw,80px);align-items:center}
+.house figure{margin:0;border:1px solid var(--seam);padding:10px;background:var(--hearth)}
+.house figure img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.house .copy{display:grid;gap:18px;min-width:0;max-width:var(--measure)}
+.credits{display:grid;gap:0;border-top:1px solid var(--seam);margin-top:6px}
+.credits div{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:12px;border-bottom:1px solid var(--seam)}
+.credits span:first-child{font-family:var(--f-display);font-size:1.15rem}
+.credits span:last-child{font-family:var(--f-label);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);align-self:center}
+.motto{font-family:var(--f-label);letter-spacing:.3em;text-transform:uppercase;font-size:.78rem;color:var(--brass)}
+
+/* support */
+.support{text-align:center;border-top:1px solid var(--seam);background:radial-gradient(60% 120% at 50% 100%,rgba(224,118,42,.12),transparent 70%)}
+.support .wrap{display:grid;justify-items:center;gap:18px}
+.support h2{font-size:clamp(2rem,1.4rem + 2.4vw,3.2rem)}
+.support p{color:var(--ash);max-width:52ch}
+
+footer{border-top:1px solid var(--seam);padding-block:28px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--ash);font-size:.9rem}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .hero .wrap,.about .wrap,.creed .wrap,.house .wrap{grid-template-columns:minmax(0,1fr)}
+  .portrait{justify-self:start;order:-1;width:min(100%,420px)}
+  .shelf{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .seal{justify-self:start;width:min(70%,240px)}
+}
+@media (max-width:560px){
+  .top nav a:nth-child(n+3){display:none}
+  .shelf{grid-template-columns:minmax(0,1fr)}
+  .book{grid-template-columns:minmax(0,120px) minmax(0,1fr);grid-template-rows:auto;align-items:start}
+  .book h3{font-size:1.3rem}
+  .bridge{grid-template-columns:minmax(0,120px) minmax(0,1fr);padding:16px;align-items:start}
+  .record .row{grid-template-columns:minmax(0,1fr);gap:2px}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero canvas{display:none}
+  .cover img{transition:none}
+}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top">Kaylin Renea</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#books">The Books</a>
+      <a href="#creed">The Heart</a>
+      <a href="#house">Publisher</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-name" style="padding-block:0">
+    <canvas id="embers" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="label">Author of the Holler &amp; Hellfire Universe</span>
+        <h1 id="hero-name">Kaylin Renea<em>the pen name of Angela Kay Smith</em></h1>
+        <p class="lede">Appalachian Gothic romance from the hollers of Pike County, Kentucky, where fallen angels drink diner coffee and <b>the corridors are open</b>.</p>
+        <div class="cta">
+          <a class="btn" href="#books">Meet the books</a>
+          <a class="btn ghost" href="#about">Read her story</a>
+        </div>
+      </div>
+      <figure class="portrait" style="margin:0">
+        <div class="frame">
+          <img src="img/kaylin-portrait.jpg" width="1000" height="1250" alt="Portrait of author Kaylin Renea, with long copper curls and glasses, wearing burgundy lace beside the Holler & Hellfire crest">
+        </div>
+        <figcaption><span class="label">Kaylin Renea</span><span class="label">Holler &amp; Hellfire</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-h">
+    <div class="wrap">
+      <div>
+        <div class="sec-head">
+          <span class="label">About the author</span>
+          <h2 id="about-h">She writes the places most people drive past.</h2>
+        </div>
+        <div class="letter">
+          <p>Kaylin Renea is the pen name of Angela Kay Smith, the author behind the Holler &amp; Hellfire Universe. She writes Appalachian Gothic: fallen angels in work boots, witches who keep the coffee hot on Route 119, and family secrets that run deeper than the coal seams under Pike County, Kentucky.</p>
+          <p>Her stories start in ordinary places. An herbalist's east fence. A diner where the waitress never lets anyone leave cold. A cottage on the south ridge that a Calhoun woman built and then kept empty for thirty-seven years, waiting. The magic in her books is old and practical, the kind handed from grandmother to granddaughter along with a recipe card and a warning.</p>
+          <p>Under all the hellfire, every book is about one thing: a relationship built on trust and belief. Her heroines are stubborn, funny, and tired of carrying the weight alone. Her Watchers are ancient and wounded, and they learn the hard way that staying takes more courage than watching.</p>
+          <p>Holler &amp; Hellfire is planned as a 39-novel series told across seven arcs, with companion soundtracks from Holler &amp; Hellfire Records and a streaming series in pre-development. Kaylin builds the universe with Brian Lee Webb through their independent company, WEBBS Entrepreneurship.</p>
+          <p class="sign">Kaylin Renea</p>
+        </div>
+      </div>
+      <aside class="record" aria-label="Author at a glance">
+        <h3>Field record &middot; Pike Co.</h3>
+        <dl>
+          <div class="row"><dt>Pen name</dt><dd>Kaylin Renea</dd></div>
+          <div class="row"><dt>Legal name</dt><dd>Angela Kay Smith</dd></div>
+          <div class="row"><dt>Genre</dt><dd>Appalachian Gothic, paranormal romance</dd></div>
+          <div class="row"><dt>Setting</dt><dd>Pike County, Kentucky, along Route 119</dd></div>
+          <div class="row"><dt>The series</dt><dd>Holler &amp; Hellfire: 39 novels across seven arcs</dd></div>
+          <div class="row"><dt>Soundtracks</dt><dd>Holler &amp; Hellfire Records, including the album <i>REFLECTION</i></dd></div>
+          <div class="row"><dt>Publisher</dt><dd>WEBBS Entrepreneurship</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section class="books" id="books" aria-labelledby="books-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">The Holler &amp; Hellfire Arc &middot; Books 1&ndash;6</span>
+        <h2 id="books-h">Five witches. Six Watchers. One county.</h2>
+        <p>Each book follows one woman of Pike County and the fallen angel who chooses to stay. Read them in order: every bond holds up the next.</p>
+      </div>
+
+      <div class="shelf">
+        <article class="book">
+          <div class="cover"><img src="img/cover-b1.jpg" width="600" height="957" alt="Cover of Fallin' for a Fallen" loading="lazy"><span class="no">Book 1</span></div>
+          <div class="book-text">
+            <h3>Fallin&rsquo; for a Fallen</h3>
+            <span class="pair">Dixie &amp; Azazel</span>
+            <p class="hook">Raelee &ldquo;Dixie&rdquo; Calhoun has a guitar, a stage name, and three outstanding warrants. She turns down a road she has never taken and makes a bargain with a fallen angel that Pike County hasn't seen in three hundred years.</p>
+            <p class="track">On <i>REFLECTION</i>: <b>Before the Compact</b></p>
+          </div>
+        </article>
+
+        <article class="book">
+          <div class="cover"><img src="img/cover-b2.jpg" width="600" height="957" alt="Cover of The Devil's in the Details" loading="lazy"><span class="no">Book 2</span></div>
+          <div class="book-text">
+            <h3>The Devil&rsquo;s in the Details</h3>
+            <span class="pair">Della &amp; Samyaza</span>
+            <p class="hook">For twenty-six years something has stood at the edge of Della Combs's east wood. When she finally walks out to the fence, the truth arrives with a price on her son's head.</p>
+            <p class="track">On <i>REFLECTION</i>: <b>What the Ground Keeps</b></p>
+          </div>
+        </article>
+
+        <article class="book">
+          <div class="cover"><img src="img/cover-b3.jpg" width="600" height="957" alt="Cover of Strike Me Down" loading="lazy"><span class="no">Book 3</span></div>
+          <div class="book-text">
+            <h3>Strike Me Down</h3>
+            <span class="pair">Carla June &amp; Baraqiel</span>
+            <p class="hook">Carla June Maynard was waitressing the night a demon tore into the Hollow Diner. When the lightning stopped, she asked the man responsible if he wanted more coffee.</p>
+            <p class="track">On <i>REFLECTION</i>: <b>Tuesday Special</b></p>
+          </div>
+        </article>
+
+        <article class="book">
+          <div class="cover"><img src="img/cover-b4.jpg" width="600" height="957" alt="Cover of All Hell Breaks Loose" loading="lazy"><span class="no">Book 4</span></div>
+          <div class="book-text">
+            <h3>All Hell Breaks Loose</h3>
+            <span class="pair">Mercy &amp; Armaros</span>
+            <p class="hook">Mercy Tackett taught herself the old ways by accident between table shifts. Now she faces a demon who has worked the same craft alone for nine hundred years, and she can't win it alone either.</p>
+            <p class="track">On <i>REFLECTION</i>: <b>Spell-Breaker</b></p>
+          </div>
+        </article>
+
+        <article class="book">
+          <div class="cover"><img src="img/cover-b5.jpg" width="600" height="957" alt="Cover of Written in the Stars" loading="lazy"><span class="no">Book 5</span></div>
+          <div class="book-text">
+            <h3>Written in the Stars</h3>
+            <span class="pair">June &amp; Kokabiel</span>
+            <p class="hook">June Tackett's dreams have started writing themselves down. In a cottage on the south ridge, a Watcher who names the stars learns to read them with her.</p>
+            <p class="track">On <i>REFLECTION</i>: <b>Every Star I Named</b></p>
+          </div>
+        </article>
+
+        <article class="book">
+          <div class="cover"><img src="img/cover-b6.jpg" width="600" height="957" alt="Cover of Outlaw Heaven, a collage of five couples" loading="lazy"><span class="no">Book 6</span></div>
+          <div class="book-text">
+            <h3>Outlaw Heaven</h3>
+            <span class="pair">The ensemble &middot; five couples</span>
+            <p class="hook">December. Heaven's full enforcement waits at the county line. Mama Calhoun has held the door for fifty-three years, and she says it's time to open it.</p>
+            <p class="track">On <i>REFLECTION</i>: <b>Outlaw Heaven</b></p>
+          </div>
+        </article>
+      </div>
+
+      <article class="book bridge" aria-label="Book 6B">
+        <div class="cover"><img src="img/cover-b6b.jpg" width="600" height="957" alt="Cover of Kasdeja and Velvet" loading="lazy"><span class="no">Book 6B</span></div>
+        <div class="book-text">
+          <span class="label">The bridge to the Expansion Arc</span>
+          <h3>Kasdeja &amp; Velvet</h3>
+          <span class="pair">Velvet Thornbloom &amp; Kasdeja</span>
+          <p class="hook">Velvet Thornbloom can feel exactly where a thread belongs. In the Blue Ridge, she and Kasdeja place the first corridor beyond Pike County, and an archangel comes to take back the healing.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="creed" id="creed" aria-labelledby="creed-h">
+    <div class="wrap">
+      <img class="seal" src="img/hh-seal.jpg" width="640" height="640" alt="The Holler & Hellfire seal, a gold H&amp;H crest flanked by ravens, reading The Codex Is the Authority" loading="lazy">
+      <div>
+        <span class="label" id="creed-h">The heart of the series</span>
+        <blockquote>
+          <p>The whole thing is about a relationship built on <em>trust</em> and <em>belief</em>.</p>
+          <p class="follow" style="font-family:var(--f-body);font-size:1.05rem;line-height:1.65;font-style:normal">In Holler &amp; Hellfire, a promise kept in good faith is stronger than any curse. The bonds between these women and their Watchers are what hold the mountains together, and Hell has never understood why that works.</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="house" id="house" aria-labelledby="house-h">
+    <div class="wrap">
+      <figure>
+        <img src="img/webbs-duo.jpg" width="1000" height="1250" alt="Kaylin Renea and Brian Lee Webb seated at a lantern-lit desk with old books and a quill, beneath the Holler & Hellfire and WEBBS Entrepreneurship marks" loading="lazy">
+      </figure>
+      <div class="copy">
+        <span class="label">The publisher</span>
+        <h2 id="house-h" style="font-size:clamp(2.1rem,1.4rem + 2.6vw,3.4rem);line-height:1.05">WEBBS Entrepreneurship</h2>
+        <p>Holler &amp; Hellfire is published independently by WEBBS Entrepreneurship, a multimedia entertainment company that builds the books, the music, and the screen adaptation under one roof. Every novel, soundtrack, and canon bible starts at the same kitchen-table desk.</p>
+        <div class="credits">
+          <div><span>Brian Lee Webb</span><span>CEO &amp; Founder</span></div>
+          <div><span>Angela Kay Smith</span><span>Writing as Kaylin Renea</span></div>
+        </div>
+        <p class="motto">People &middot; Ideas &middot; Momentum</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="support" aria-labelledby="support-h">
+    <div class="wrap">
+      <div class="rule" style="width:min(100%,420px)"><span>H&amp;H</span></div>
+      <h2 id="support-h">Help keep the corridors open.</h2>
+      <p>Holler &amp; Hellfire is built by two people with no studio behind them. Reader support goes straight into finishing the books and recording the soundtracks.</p>
+      <a class="btn" href="https://gofund.me/c74a6b39c" target="_blank" rel="noopener">Support the universe</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 WEBBS Entrepreneurship. Holler &amp; Hellfire&trade; and Kaylin Renea&trade;.</span>
+    <span>Pike County, Kentucky &middot; The corridors are open.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var c=document.getElementById('embers');
+  if(!c||!c.getContext) return;
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var ctx=c.getContext('2d'),W=0,H=0,dpr=Math.min(window.devicePixelRatio||1,2),parts=[];
+  function size(){var r=c.getBoundingClientRect();W=r.width;H=r.height;c.width=W*dpr;c.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);}
+  function spawn(init){return{x:Math.random()*W,y:init?Math.random()*H:H+10,r:Math.random()*1.6+.4,v:Math.random()*.35+.12,d:(Math.random()-.5)*.25,a:Math.random()*.6+.25,p:Math.random()*6.28};}
+  size();for(var i=0;i<46;i++)parts.push(spawn(true));
+  window.addEventListener('resize',size);
+  function tick(){
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<parts.length;i++){var p=parts[i];p.y-=p.v;p.p+=.02;p.x+=p.d+Math.sin(p.p)*.15;
+      if(p.y<-10)parts[i]=p=spawn(false);
+      var fade=Math.min(1,p.y/(H*.35));
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.283);ctx.fillStyle='rgba(232,128,48,'+(p.a*fade).toFixed(3)+')';ctx.fill();}
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+</script>
+
+</body></html>
